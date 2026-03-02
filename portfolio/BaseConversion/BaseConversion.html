@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+<title>進数変換</title>
+</head>
+
+<body>
+
+    <h1>進数変換</h1>
+    <div class="uiWrapper">
+        <div class="leftContentWrap">
+            <div class="decimal-converter wrapper">
+                <h2>10進数を2進数、8進数、16進数へ変換</h2>
+                <div class="calculator">
+                    <input type="text" id="number" value = "" placeholder="数値を入力して下さい">
+                    <div class="buttons">
+                        <button id="convert-btn">進数変換</button>
+                    </div>
+                    <div id="result"></div>
+                </div>
+                <dl>
+                    <dt>2進数 →</dt><dd id="binary-result"></dd><br>
+                    <dt>8進数 →</dt><dd id="octal-result"></dd><br>
+                    <dt>16進数 →</dt><dd id="hexadecimal-result"></dd>
+                </dl>
+            </div>
+            <div class="binary-converter wrapper">
+                <h2>2進数から10進数へ変換</h2>
+                <input type="text" id="binary-input" placeholder="2進数を入力して下さい">
+                <div>
+                    <button id="binary-to-decimal-btn">変換</button>
+                </div>
+                <div>
+                    <dt>10進数 →</dt><dd id="binary-to-decimal-result"></dd>
+                </div>
+            </div>
+            <div class="octal-converter wrapper">
+                    <h2>8進数から10進数へ変換</h2>
+                    <input type="text" id="octal-input" placeholder="8進数を入力して下さい">
+                    <div>
+                        <button id="octal-to-decimal-btn">変換</button>
+                    </div>
+                    <div>
+                        <dt>10進数 →</dt><dd id="octal-to-decimal-result"></dd>
+                    </div>
+            </div>
+            <div class="hex-converter wrapper">
+                <h2>16進数から10進数へ変換</h2>
+                <input type="text" id="hex-input" placeholder="16進数を入力して下さい">
+                <div>
+                    <button id="hex-to-decimal-btn">変換</button>
+                </div>
+                <div>
+                    <dt>10進数 →</dt><dd id="hex-to-decimal-result"></dd>
+                </div>
+            </div>
+        </div>
+        <!-- n進数からn進数へ変換 -->
+        <div class="base-converter wrapper">
+            <h2>n進数からn進数へ変換</h2>
+            <input type="text" id="base-input" placeholder="変換したい数値を入力して下さい"><br>
+            <input type="text" id="from-base-input" placeholder="元の進数を入力して下さい"><br>
+            <input type="text" id="to-base-input" placeholder="変換後の進数を入力して下さい"><br>
+            <div>
+                <button id="base-convert-btn">変換</button>
+            </div>
+            <div>
+                <h3>変換結果</h3>
+                <p id="base-convert-result"></p>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    font-size: 16px;
+    background-color: #7eca97;
+}
+.avatarIcon {
+    width: 550px;
+    height: 480px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    float: left;
+    margin-right: 20px;
+}
+.clearFloat {
+    clear: both;
+}
+
+dt {
+    margin-top: 10px;
+}
+ul, dl{
+    margin: 0;
+    padding-left: 0;
+}
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+td {
+    padding: 10px;
+    text-align: center;
+}
+td:first-child {
+    text-align: left;
+}
+th {
+    background-color: #3476d3;
+    padding: 0 10px;
+}
+time {
+    font-size: 14px;
+    color: #5c5a5a;
+}
+.withDateTime {
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

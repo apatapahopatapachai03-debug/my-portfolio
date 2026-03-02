@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+<title>電卓</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="header">電卓</h1>
+        <div id="calc">
+            <div>
+                <!-- readonly属性にして直接入力不可 計算式や結果を表示するためid=”result”を設定
+                valueを0にして初期表示 -->
+                <input readonly id="result" type ="text" value="0"> 
+                <button onclick="c_click()">C</button>
+            </div>
+            <div>
+                <button onclick="num_click(this.innerHTML)">7</button>
+                <button onclick="num_click(this.innerHTML)">8</button>
+                <button onclick="num_click(this.innerHTML)">9</button>
+                <button onclick="ope_click(this.innerHTML)">÷</button>
+            </div>
+            <div>
+                <button onclick="num_click(this.innerHTML)">4</button>
+                <button onclick="num_click(this.innerHTML)">5</button>
+                <button onclick="num_click(this.innerHTML)">6</button>
+                <button onclick="ope_click(this.innerHTML)">×</button>
+            </div>
+            <div>
+                <button onclick="num_click(this.innerHTML)">1</button>
+                <button onclick="num_click(this.innerHTML)">2</button>
+                <button onclick="num_click(this.innerHTML)">3</button>
+                <button onclick="ope_click(this.innerHTML)">-</button>
+            </div>
+            <div>
+                <button onclick="num_click(this.innerHTML)">0</button>
+                <button onclick="num_click(this.innerHTML)">.</button>
+                <button onclick="equal_click()">=</button>
+                <button onclick="ope_click(this.innerHTML)">+</button>
+            </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

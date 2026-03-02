@@ -1,0 +1,1513 @@
+@charset "utf-8";
+
+.noto-sans-jp- {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.noto-serif-jp- {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+#wrapper{
+    width: 1366px;
+    margin: 0 auto;
+}
+
+/*こっからローディング*/
+#loadingLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#007AB7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+/* JSでこのクラスがついたら消えるようにいたしますわ */
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* 下のボタンやリンクを触れるようにしますわよ！ */
+}
+
+.loadingLogo img {
+    width: 318px; /* お好みのサイズに調整してくださいまし */
+    height: auto;
+    opacity: 0; /* 最初は隠しておきますわ */
+    animation: jiwaFade 2.5s ease-in-out forwards infinite;
+}
+
+/* じわ～っと出てくるアニメーション */
+@keyframes jiwaFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.95); /* 少し小さめから */
+        filter: blur(10px);    /* ぼかしを入れるとより「じわっ」としますわ */
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);    /* 等倍へ */
+        filter: blur(0);       /* くっきり！ */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.05); /* 最後に少しだけ大きくして消えますわ */
+    }
+}
+
+/*こっからフッター*/
+footer{
+    background-color: #007AB7;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+footer p{
+    color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #03A9F4;
+    font-size: 12px;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 1px solid #03A9F4;
+}
+
+
+.footer-Container{
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.Flag{
+    align-items: center;
+    margin: 40px auto 0;
+}
+
+.footer-Flag{
+    width: 64px;
+    height: 48px;
+}
+
+.footer-Main{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+}
+
+.footer-Nav {
+    list-style: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.footer-Nav li {
+    padding: 20px 0 12px;
+    width: 332px;
+    margin-left: 20px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer-Nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footerLogo {
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+.footerLogo img{
+    width: 256px;
+    height: auto;
+}
+
+.footer-Sns{
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+}
+
+/*こっからヘッダー*/
+.mainVisual{
+    width: 1366px;
+    height: 768px;
+    background-image: url(../images/heroTopPC.png);
+    background-size: cover;
+    position: relative;
+}
+
+.mainLogo img{
+    position: absolute;
+    top: 174px;
+    left: 223px;
+    width: 780px;
+    height: auto;
+}
+
+header{
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 1366px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 20px;
+}
+
+header ul a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header h1{
+    margin: 20px 0 0 103px;
+}
+
+.headerInner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gNav{
+    margin-right: 108px;
+}
+
+.mainSns{
+    position: absolute;
+    left: 103px;
+    top: 512px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*こっからフォルモサ*/
+.formosaRow.row1.container{
+    display: flex;
+    height: 458px;
+    background-color: rgba(217,217,217,1);
+    background-image:linear-gradient(rgba(217, 217, 217, 0.7), rgba(217, 217, 217, 0.7)),url(../images/formosa1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center right;
+    border: 1px solid #000;
+}
+.formosaText img{
+    position: absolute;
+    top: 80px;
+    left: 283px;
+}
+.formosaImage{
+    position: absolute;
+    top: 80px;
+    left: 627px;
+}
+.sectionFormosa h2{
+    font-size: 48px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: normal;
+    position: absolute;
+    top: 258px;
+    left: 103px;
+    margin: 0;
+    line-height: 1;
+}
+.sectionFormosa h2 span{
+    display: block;
+    margin-top: 20px;
+    font-size: 32px;
+    border-bottom: 1px solid #000 ;
+    padding-bottom: 20px;
+}
+/*こっからフォルモサ2*/
+.formosaRow.row2.container{
+    display: flex;
+    height: 458px;
+    background-color: rgba(217,217,217,1);
+    background-image:linear-gradient(rgba(217, 217, 217, 0.7), rgba(217, 217, 217, 0.7)),url(../images/formosa2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center right;
+}
+.formosaImage2{
+    position: absolute;
+    top: 80px;
+    left: 627px;
+}
+.formosaText p{
+    font-size: 20px;
+    font-family:  "Zen Kaku Gothic New";
+    width: 420px;
+    position: absolute;
+    top: 140px;
+    left: 103px;
+    line-height: 1.6;
+    margin: 0;
+}
+.formosaRow.row2 .formosaText p::before,
+.formosaRow.row2 .formosaText p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+.formosaRow.row2 .formosaText p::before {
+    top: -60px;
+}
+.formosaRow.row2 .formosaText p::after{
+    bottom: -60px;
+}
+
+/*こっからおすすめスポット*/
+.sectionTravel.container{
+    height: 1007px;
+    position: relative;
+}
+.sectionTravel.container h2{
+    display: block;
+    width: 530px;
+    height: 96px;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 733px;
+    margin-bottom: 0;
+}
+.sectionTravel.container h2 span{
+    font-size: 24px;
+    padding-left: 24px;
+}
+.headerDecoration2{
+    background-image: url(../images/midashiPC.png);
+    width: 530px;
+    height: 96px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -15px;
+    left: 733px;
+}
+.travelText p{
+    width: 420px;
+    height: 248px;
+    font-size: 20px;
+    font-family: "Zen Kaku Gothic New";
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    top: 418px;
+    left: 163px;
+    margin: 0;
+}
+.mapWrapper{
+    width: 400px;
+    height: 611px;
+    position: absolute;
+    top: 236px;
+    left: 803px;
+}
+.mapWrapper .map{
+    position: absolute;
+    z-index: 1;
+    left: 79px;
+}
+.mapWrapper .taichu{
+    position: absolute;
+    top: 90px;
+    z-index: 2;
+}
+.mapWrapper .taipei{
+    position: absolute;
+    top: 61px;
+    left: 301px;
+    z-index: 2;
+}
+.mapWrapper .tainan{
+    position: absolute;
+    top: 402px;
+    left: 63px;
+    z-index: 2;
+}
+.sectionTravel.container::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 480px;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+}
+
+/*こっからおすすめイベント*/
+.sectionEvent.container{
+    height: 1419px;
+    position: relative;
+}
+.sectionEvent.container h2{
+    display: block;
+    width: 530px;
+    height: 96px;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 103px;
+    margin-bottom: 0;
+}
+.sectionEvent.container h2 span{
+    font-size: 24px;
+    padding-left: 24px;
+}
+.headerDecoration3{
+    background-image: url(../images/midashiPC.png);
+    width: 530px;
+    height: 96px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -15px;
+    left: 103px;
+}
+.event1{
+    width: 1160px;
+    height: 472px;
+    margin: 40px auto 0;
+    display: flex;
+    font-family: "Zen Kaku Gothic New";
+    flex-wrap: wrap;
+}
+.eventTitle1 h3{
+    width:100%;
+    font-size: 36px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: normal;
+    margin-top: 120px;
+    margin-left: 103px;
+}
+.event1 img{
+    width: 580px;
+    height: 396px;
+}
+.eventInfo1{
+    width: 580px;
+    height: 396px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+.eventInfo1 p.midashi1{
+    font-weight: bold;
+    margin-bottom: 32px;
+    margin-top: 31px;
+    height: 20px;
+}
+.eventInfo1 p.kikan1{
+    margin-bottom: 32px;
+    margin-top: 0;
+    height: 20px;
+}
+.eventInfo1 p.honbun1{
+    width: 314px;
+    height: 192px;
+    line-height: 1.6;
+    margin:0 auto 0;
+    text-align: left;
+    position: relative;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+.eventInfo1 p.honbun1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 314px;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+.eventInfo1 p.honbun1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 314px;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+/*こっからおすすめイベント2*/
+.event2{
+    width: 1160px;
+    height: 472px;
+    margin: 40px auto 4px;
+    display: flex;
+    font-family: "Zen Kaku Gothic New";
+    flex-wrap: wrap;
+}
+.eventTitle2 h3{
+    width:100%;
+    font-size: 36px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: normal;
+    margin-top: 4px;
+    margin-left: 103px;
+}
+.event2 img{
+    width: 580px;
+    height: 396px;
+}
+.eventInfo2{
+    width: 580px;
+    height: 396px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+.eventInfo2 p.midashi2{
+    font-weight: bold;
+    margin-bottom: 32px;
+    margin-top: 31px;
+    height: 20px;
+}
+.eventInfo2 p.kikan2{
+    margin-bottom: 32px;
+    margin-top: 0;
+    height: 20px;
+}
+.eventInfo2 p.honbun2{
+    width: 314px;
+    height: 192px;
+    line-height: 1.6;
+    margin:0 auto 0;
+    text-align: left;
+    position: relative;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+.eventInfo2 p.honbun2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 314px;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+.eventInfo2 p.honbun2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 314px;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+.pageTop{
+    position: absolute;
+    top: 739px;
+    right: 20px;
+    z-index: 3;
+}
+
+/*こっから台湾基本情報*/
+.sectionInfo.container{
+    height: auto;
+}
+.infoBox{
+    width: 1040px;
+    height: 560px;
+    display: block;
+    border: 1px solid #000;
+    margin: 0 auto 80px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start
+}
+.infoBox h3{
+    font-size: 40px;
+    font-family: "Zen Kaku Gothic New";
+    margin: 40px auto 0;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+}
+.listBox{
+    display: flex;
+}
+.leftList{
+    width: 450px;
+    height: 320px;
+    font-size: 20px;
+    font-family: "Zen Kaku Gothic New";
+    list-style: none;
+    margin: 80px 60px 80px 40px;
+    padding: 0;
+    line-height: 1.6;
+}
+.rightList{
+    width: 450px;
+    height: 320px;
+    font-size: 20px;
+    font-family: "Zen Kaku Gothic New";
+    list-style: none;
+    margin: 80px 40px 80px 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/*こっからギャラリー*/
+.sectionGallery{
+    height: auto;
+    position: relative;
+}
+.sectionGallery{
+    position: relative;
+}
+.sectionGallery h2{
+    display: block;
+    width: 530px;
+    height: 96px;
+    font-family: "Zen Kaku Gothic New";
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 103px;
+    margin-bottom: 0;
+}
+.sectionGallery h2 span{
+    font-size: 24px;
+    padding-left: 24px;
+}
+.headerDecoration{
+    background-image: url(../images/midashiPC.png);
+    width: 530px;
+    height: 96px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -15px;
+    left: 103px;
+}
+
+/*こっからスライド*/
+/* スライダーを包む器 */
+.swiper-container-wrapper {
+  max-width: 1366px;
+  margin: 160px auto 0;
+  position: relative;
+  overflow: hidden;
+  overflow: visible; 
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-214px);
+}
+
+.mySwiper {
+  width: 100%;
+  /* ★ここが計算の極意ですわ！
+     左側に少し余白を作ることで、1枚目を見切れさせ、
+     3枚を中央付近に、5枚目を見切れさせますの。 */
+  padding-left: 40px; 
+  overflow: visible
+}
+
+.swiper-slide {
+  width: 295px !important;
+  height: 467px !important;
+}
+
+/* 今見えているもの、あるいはマウスを乗せたものを明るくしてもよろしくてよ */
+.swiper-slide-active,
+.swiper-slide:hover {
+  opacity: 1 !important;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*こっからボタン*/
+/* 1. 操作パネル全体の高さ（64pxに合わせます） */
+.swiper-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px; 
+  padding: 0 40px;
+  border-radius: 50px;
+  width: 628px;
+  margin: 60px auto 80px;
+  gap: 60px;
+}
+
+/* 2. 矢印ボタンを64pxに巨大化！ */
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  width: 64px !important;  /* お写真の指定通りですわ */
+  height: 64px !important;
+  background-color: #888 !important;
+  border-radius: 50%;
+  color: #fff !important;
+  margin: 0 !important;
+}
+
+/* 矢印アイコン自体の太さとサイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px !important; /* アイコンも大きくしないと不格好ですわ */
+  font-weight: 900;
+}
+
+/* 3. ドット（ページネーション）を28pxに！ */
+.swiper-pagination {
+  position: static !important;
+  display: flex !important;
+  align-items: center;
+  gap: 60px;
+  width: auto !important;
+}
+
+/* ドットの本体設定 */
+.swiper-pagination-bullet {
+  width: 28px !important;  /* お写真の指定通りですわ */
+  height: 28px !important;
+  background: #888 !important; /* 矢印と同じグレーに */
+  opacity: 1 !important;
+  margin: 0 !important;
+  border-radius: 50%;
+  transition: none;
+}
+
+/* アクティブなドット（今ここ！の色） */
+.swiper-pagination-bullet-active {
+  background: #007aff !important; /* 青色、あるいはお好きな色に */
+  transform: none; /* ほんの少しだけ大きくして強調しますわ */
+}
+
+/*ハンバーガーPCで消すやつ*/
+.menuBtn {
+  display: none;
+}
+.gNav {
+  position: static;
+  width: auto;
+  height: auto;
+  background: none;
+  }
+.gNav ul {
+  display: flex;
+  gap: 20px;
+}
+.drawerHeader, .menuTitle, .overlay {
+  display: none;
+}
+
+/*こっからメディアクエリ*/
+
+@media screen and (max-width:768px){
+    body{
+        margin: 0;
+    }
+    /*とりあえず解除*/
+    header, .mainVisual, footer {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    #wrapper{
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    /*こっからヘッダー*/
+    .mainVisual{
+        width: 100%;
+        height: 677px;
+        background-image: url(../images/heroTopSP.png);
+        background-size: cover;
+        background-position: center;
+    }
+    header .siteLogo{
+        display: none;
+    }
+    .mainLogo{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 200px 20px 332px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .mainLogo img{
+        max-width: 335px;
+        height: auto;
+        width: 100%;
+        position: static;
+    }
+    .gNav ul{
+        display: none;
+    }
+    .mainSns{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 136px;
+        position: absolute;
+        top: auto;
+        left: 20px;
+        bottom: 70px;
+        z-index: 2;
+    }
+
+    /*こっからハンバーガー*/
+    .menuBtn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 48px;
+        height: 48px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        cursor: pointer;
+        position: fixed;
+        top: 4px;
+        right: 4px;
+        z-index: 15;
+    }
+    .menuBtn span{
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+    .menuBtn.is-active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .menuBtn.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menuBtn.is-active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .gNav{
+        position: fixed;
+        top: 0;
+        right: -225px;
+        left: auto;
+        width: 225px;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: 0.3s;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        margin-right: 0;
+    }
+    .menuTitle {
+        display: block ;
+        color: #ffffff;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 40px;
+        text-align: center;
+        width: 100%;
+        margin: 84px auto 60px;
+    }
+    .gNav.is-active {
+        right: 0;
+        left: auto;
+    }
+    .gNav ul{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .drawerHeader, .menuTitle{
+        display: flex; 
+        justify-content: center;
+    }
+    .overlay.is-active {
+        display: block;
+    }
+    .drawerHeader{
+        width: 101px;
+        height: 40px;
+        margin: 8px 112px 0 12px;
+    }
+    .gNav ul li a{
+        border-bottom: 1px solid #ffffff;
+    }
+    .gNav ul li{
+        margin-bottom: 20px;
+    }
+    .gNav ul li:nth-child(1){
+        margin-bottom: 40px;
+    }
+    .gNav ul li:nth-child(4){
+        margin-bottom: 40px;
+    }
+    .gNav ul li:nth-child(5){
+        margin-bottom: 40px;
+    }
+    .gNav ul li:nth-child(6){
+        margin-bottom: 171px;
+    }
+
+    /*こっからフォルモサ*/
+    .sectionFormosa{
+        width: 100%;
+        height: auto;
+    }
+    .formosaText{
+        width: 100%;
+        position: static;
+        display: block;
+    }
+    .formosaText img.flagImg{
+        display: block;
+        position: static;
+        width: 32px;
+        height: 24px;
+        margin: 20px auto 40px;
+    }
+    .formosaRow.row1.container {
+        background: none ;
+        background-image: url(../images/formosaBack1.png);
+        background-size: cover;
+        background-position: center;
+        height: 407px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formosaText h2{
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: static;
+        align-items: center;
+    }
+    .formosaText h2 span{
+        font-size: 12px;
+        margin-top: 20px auto 0;
+        text-align: center;
+        display: block;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #000;
+        width: fit-content;
+        position: static;
+    }
+    .formosaImage{
+        position: static;
+        object-fit: cover;
+    }
+    .formosaImage img{
+        width: 335px;
+        height: 139px;
+        margin: 60px auto ;
+    }
+    .sectionFormosa .formosaRow.row2.container{
+        background: none;
+        background-image: url(../images/formosaBack2.png);
+        background-size: cover;
+        background-position: center;
+        height: 399px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formosaRow.row2 .formosaText p{
+        position: relative;
+        width: 223px;
+        height: 96px;
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: left;
+        top: 0;
+        left: 0;
+        padding: 12px 0;
+        margin: 20px auto 0;
+    }
+    .formosaRow.row2 .formosaText p::before,
+    .formosaRow.row2 .formosaText p::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+    .formosaRow.row2 .formosaText p::before{
+        top: 0;
+    }
+    .formosaRow.row2 .formosaText p::after{
+        bottom: 0;
+    }
+    .formosaImage2{
+        position: static;
+        object-fit: cover;
+    }
+    .formosaImage2 img{
+        width: 335px;
+        height: 139px;
+        margin: 60px auto
+    }
+
+    /*こっからギャラリー*/
+    .sectionGallery h2{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-size: 24px;
+        width: auto;
+        height: 24px;
+        margin: 28px auto 0;
+        gap: 6px;
+        position: static;
+    }
+    .sectionGallery h2 span{
+        font-size: 12px;
+        padding: 0;
+    }
+    .headerDecoration{
+        position: static;
+        width: 220px;
+        height: 40px;
+        margin: -25px auto 0;
+    }
+
+    /*こっからドット*/
+    .swiper-container-wrapper{
+        position: static;
+        margin-top: 80px;
+        padding: 0;
+    }
+    .swiper-pagination{
+        position: relative;
+        margin: 0 auto ;
+        gap: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .swiper-pagination-bullet{
+        width: 18px !important;
+        height: 18px !important;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: none !important;
+    }
+    .swiper-controls{
+        width: 100%;
+        height: 18px;
+        margin: 20px auto 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    /*こっからスライド*/
+    /* 画面横スクロールは止める */
+    html, body { overflow-x: hidden; }
+
+    /* 画面幅の窓（wrapper内でも100vw表示） */
+    .galleryViewport{
+        width: 100vw !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: visible !important;
+    }
+
+    /* ★ここが肝：Swiperはデフォで overflow:hidden になりがち */
+    .swiper.mySwiper{
+        overflow: visible !important;
+    }
+
+    /* 念のため周辺も切らない */
+    .sectionGallery,
+    .swiper-container-wrapper{
+        overflow: visible !important;
+    }
+
+    /* スライド固定 */
+    .swiper.mySwiper .swiper-slide{
+        width: 295px !important;
+        height: 467px !important;
+    }
+    .swiper.mySwiper .swiper-slide img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /*こっからここからおすすめスポット*/
+    .sectionTravel.container{
+        height: auto;
+        min-height: 0;
+        padding-bottom: 120px;
+    }
+    .sectionTravel.container h2{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-size: 24px;
+        width: auto;
+        height: 24px;
+        margin: 60px auto 0;
+        gap: 6px;
+        position: static;
+    }
+    .sectionTravel.container h2 span{
+        font-size: 12px;
+        padding: 0;
+    }
+    .headerDecoration2{
+        position: static;
+        width: 220px;
+        height: 40px;
+        margin: -25px auto 0;
+    }
+    .travelText p{
+        width: 220px;
+        height: 76px;
+        font-size: 12px;
+        padding: 12px 0 ;
+        position: static;
+        margin: 60px auto;
+    }
+    .mapWrapper {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 255px;
+        height: 406px;
+        margin: 0 auto ;
+        display: block;
+        line-height: 0;
+    }
+    .mapWrapper .map {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        position: static;
+    }
+    .mapWrapper a img{
+        position: absolute;
+    }
+    .mapWrapper .taichu{
+        top: 82px;
+        width: 59px;
+        height: 126px;
+    }
+    .mapWrapper .tainan{
+        width: 59px;
+        height: 126px;
+        top: 280px;
+        left: 52px;
+    }
+    .mapWrapper .taipei{
+        width: 59px;
+        height: 126px;
+        top: 55px;
+        left: 196px;
+    }
+    .sectionTravel.container::after{
+    content: "";
+    position: absolute;
+    width: 223px;
+    height: 1px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+    }
+
+    /*こっからイベント*/
+    .sectionEvent.container{
+        height: auto;
+        width: 100%;
+    }
+    .sectionEvent.container h2{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-size: 24px;
+        width: auto;
+        height: 24px;
+        margin: 20px auto 0;
+        gap: 6px;
+        position: static;
+    }
+    .sectionEvent.container h2 span{
+        font-size: 12px;
+        padding: 0;
+    }
+    .headerDecoration3{
+        position: static;
+        width: 220px;
+        height: 40px;
+        margin: -25px auto 0;
+    }
+    .sectionEvent .eventTitle1 h3{
+        font-size: 20px;
+        margin: 60px auto 20px;
+        text-align: center;
+    }
+    .event1{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .event1 img{
+        display: block;
+        width: 335px;
+        height: 194px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+    .eventInfo1{
+        width: 100%;
+    }
+    .eventInfo1 p.midashi1{
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 20px auto 8px;
+        text-align: center;
+    }
+    .eventInfo1 p.kikan1{
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .eventInfo1 p.honbun1{
+        width: 223px;
+        height: 96px;
+        font-size: 12px;
+        line-height: 1.6;
+        padding: 12px 0 12px;
+    }
+    .eventInfo1 p.honbun1::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 223px;
+        height: 1px;
+        background-color: #000;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    .eventInfo1 p.honbun1::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 223px;
+        height: 1px;
+        background-color: #000;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+    .sectionEvent .container{
+        width: 100%;
+        height: auto;
+    }
+    .eventTitle2 h3{
+        font-size: 20px;
+        text-align: center;
+        margin: -20px auto 20px;
+    }
+    .event2{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .event2 img{
+        width: 335px;
+        height: 194px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    .eventInfo2{
+        width: 100%;
+        height: auto;
+    }
+    .eventInfo2 p.midashi2{
+        font-size: 12px;
+        font-weight: bold;
+        margin: 20px auto 8px;
+    }
+    .eventInfo2 p.kikan2{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .eventInfo2 p.honbun2{
+        width: 223px;
+        height: 96px;
+        line-height: 1.6;
+        font-size: 12px;
+        padding: 12px 0;
+    }
+    .eventInfo2 p.honbun2::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 223px;
+        height: 1px;
+        background-color: #000;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+    }
+    .eventInfo2 p.honbun2::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 223px;
+        height: 1px;
+        background-color: #000;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    /*こっから台湾基本情報*/
+    .sectionInfo.container{
+        width: 100%;
+        height: auto;
+        margin: 80px auto 0;
+    }
+    .infoBox{
+        margin-bottom: 60px;
+        width: 335px;
+        
+    }
+    .title h3{
+        display: block;
+        font-size: 20px;
+        margin: 20px auto 40px;
+        width: 100%;
+    }
+    .infoBox .listBox{
+        display: block;
+    }
+    .listBox ul.leftList{
+        font-size: 12px;
+        line-height: 1.6;
+        width: 295px;
+        height: 192px;
+        margin: 0 auto;
+    }
+    .listBox ul.rightList{
+                font-size: 12px;
+        line-height: 1.6;
+        width: 295px;
+        height: 192px;
+        margin: 40px auto 40px;
+    }
+    /*こっから戻るボタン*/
+    .pageTop{
+        position: absolute;
+        top: 1506px;
+        right: 4px;
+        width: 48px;
+        height: 48px;
+    }
+
+    /*こっからSPフッター*/
+    .footer{
+        width: 100%;
+        height: auto;
+    }
+    .Flag{
+        margin: 0 auto;
+    }
+    .footer-Container .Flag img{
+        width: 32px;
+        height: 24px;
+        margin: 20px auto 2px;
+    }
+    .footer-Main{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .footer-Nav{
+        display: block;
+        position: relative;
+        left: auto;
+        width: 195px;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footer-Nav a{
+        display: block;
+        font-size: 12px;
+    }
+    .footer-Nav li{
+        padding: 18px 0 6px;
+        margin: 0 auto;
+        width: 195px;
+    }
+    .footerLogo{
+        position: static ;
+        top: auto;
+        left: auto;
+        margin: 0;
+        padding: 0;
+        flex-shrink: 0;
+        transform: none;
+        width: 71px;
+    }
+    .footerLogo img{
+        width: 71px;
+        height: 28px;
+        display: block;
+    }
+    .footer-BottomArea{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 20px;
+        margin: 40px auto 0;
+        align-items: center;
+        box-sizing: border-box ;
+    }
+    .footer-Sns{
+        display: flex;
+        gap: 20px;
+        margin: 0 117px 0 24px;
+        width: auto;
+    }
+    footer p{
+        font-size: 10px;
+        padding: 12px 0;
+        margin: 20px auto 0;
+    }
+
+    /*こっからローディング*/
+    #loadingLayer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color:#007AB7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.8s ease, visibility 0.8s;
+    }
+
+    /* JSでこのクラスがついたら消えるようにいたしますわ */
+    .loaded {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none; /* 下のボタンやリンクを触れるようにしますわよ！ */
+    }
+
+    .loadingLogo img {
+        width: 318px; /* お好みのサイズに調整してくださいまし */
+        height: auto;
+        opacity: 0; /* 最初は隠しておきますわ */
+        animation: jiwaFade 2.5s ease-in-out forwards infinite;
+    }
+
+    /* じわ～っと出てくるアニメーション */
+    @keyframes jiwaFade {
+        0% {
+            opacity: 0;
+            transform: scale(0.95); /* 少し小さめから */
+            filter: blur(10px);    /* ぼかしを入れるとより「じわっ」としますわ */
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1);    /* 等倍へ */
+            filter: blur(0);       /* くっきり！ */
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.05); /* 最後に少しだけ大きくして消えますわ */
+        }
+    }
+
+}
